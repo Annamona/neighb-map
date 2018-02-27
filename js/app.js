@@ -5,7 +5,7 @@ var initialIcon;
 var hoverIcon;
 
 function apiError(){
-  $("#map").text("Unable to load the map. Please try again later.")
+  $("#map").text("Unable to load the map. Please try again later.");
 }
 function initMap() {
     map = new google.maps.Map(document.getElementById('map'), {
@@ -117,7 +117,6 @@ var AppViewModel = function() {
             location.visible(inFilter);
             return inFilter;
         });
-        return self.mapList();
     }, self);
 };
 
@@ -136,7 +135,7 @@ function createInfoWindowsLayout(marker, markerItem, infowindow) {
               '</div>'+
             '</div>';
         infowindow.setContent(contentString);
-}
+};
 
 var getFoursquareData = function(markerItem) {
     var clientID = 'XYRC2FECYK04KM4TODERCX20OCOMVPTRBWSTSLO1FS5NGA3W';
@@ -157,8 +156,8 @@ var getFoursquareData = function(markerItem) {
     });
 
     return markerItem;
-}
+};
 
 function printValue(value){
   return value?value:"";
-}
+};
