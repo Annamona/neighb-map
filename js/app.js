@@ -135,7 +135,7 @@ function createInfoWindowsLayout(marker, markerItem, infowindow) {
               '</div>'+
             '</div>';
         infowindow.setContent(contentString);
-};
+}
 
 var getFoursquareData = function(markerItem) {
     var clientID = 'XYRC2FECYK04KM4TODERCX20OCOMVPTRBWSTSLO1FS5NGA3W';
@@ -160,4 +160,4 @@ var getFoursquareData = function(markerItem) {
 
 function printValue(value){
   return value?value:"";
-};
+}
