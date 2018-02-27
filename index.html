@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Neighborhood Map for the 6th Udacity Project FEND">
+    <meta name="keywords" content="HTML,CSS,XML,JavaScript,Udacity,Neighborhood">
+    <meta name="author" content="Anna Monacelli">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/menu.css">
+    <!-- including Jquery and Bootstrap framework from hosted resource -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+</head>
+
+<body>
+  <!-- Side Navigation activated clicking on Hamburger Icon -->
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <form class="navbar-form navbar-right" role="search">
+            <div class="input-group">
+                <input type="text" class="form-control" placeholder="Search" name="query" data-bind="textInput: sInput">
+            </div>
+        </form>
+        <div data-bind="foreach: locationList">
+            <a href="#" data-bind="text: title, click: show"></a>
+        </div>
+    </div>
+    <main class="container-fluid">
+        <div class="row">
+            <div id="map"></div>
+            <div class="menu-icon">
+                <span onclick="openNav()" style="margin-left: 10px;">&#9776;</span>
+            </div>
+
+        </div>
+    </main>
+    <script src="js/lib/knockout.min.js"></script>
+    <script src="js/data.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/menu.js"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?libraries=places,drawing,geometry&key=AIzaSyCl8i9mWaIfO0gN6aQZeWXR-oCmBVHXM2Y&callback=initMap" onerror="apiError()">
+    </script>
+</body>
+
+</html>
